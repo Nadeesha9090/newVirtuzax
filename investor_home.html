@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>.Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.theme-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons-1.4.2.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- Investor Landing Page -->
+    <div data-role="page" id="home" data-theme="b">
+        <div data-role="panel" data-position="left" data-display="push" data-position-fixed="true" data-theme="b" id="mypanel">
+            <div class="sidebar-header">
+                <h1>Username</h1>
+            </div>
+            <div class="profile-image">
+
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#profile">Profile</a>
+                    </li>
+                    <li><a href="#">My Ventures</a>
+                    </li>
+                    <li data-role="list-divider">Meeting Management</li>
+                    <li><a href="#">Approve Arranged Meetings</a>
+                    </li>
+                    <li><a href="#">Upcoming Meetings</a>
+                    </li>
+                    <li><a href="#">Completed Meetings</a>
+                    </li>
+                    <li data-role="list-divider">Other</li>
+                    <li><a href="#">.connect History</a>
+                    </li>
+                    <li><a href="#">Subscription Details</a>
+                    </li>
+                    <li><a href="#aboutPage">About .connect</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /panel -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#mypanel" data-icon="bars" data-iconpos="notext" class=""></a>
+            <h1>Investor</h1>
+        </div>
+        <div data-role="content" class="app-content" data-theme="b">
+            <div class="landing">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="landing-link" href="#recommendedEntrepreneur">
+                            <div class="">
+                                <span class="step size-64 ">
+                                    <i class="icon ion-ios7-people landing-icon"></i>
+                                </span>
+                            </div>
+                            <p>Recommended Entrepreneurs</p>
+                        </a>
+
+                    </div>
+                    <div class="ui-block-b">
+                        <a class="landing-link" href="#searchEntrepreneur">
+                            <div class="">
+                                <span class="step size-64 ">
+                                    <i class="icon ion-ios7-search-strong landing-icon"></i>
+                                </span>
+                            </div>
+                            <p>Search Entrepreneurs</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a class="landing-link" href="#">
+                            <div class="">
+                                <span class="step size-64 ">
+                                    <i class="icon ion-arrow-graph-up-right landing-icon"></i>
+                                </span>
+                            </div>
+                            <p>Current Venture Progress</p>
+                        </a>
+
+                    </div>
+                    <div class="ui-block-b">
+                    </div>
+                </div>
+            </div>
+            <div class="space-small"></div>
+            <ul data-role="listview" data-count-theme="b" data-inset="true" data-shadow="true">
+                <li><a href="#reqByEntrepreneur">Requests By Entrepreneurs<span class="ui-li-count">5</span></a>
+                </li>
+                <li><a href="#accReqByEntrepreneur">Entrepreneur Accepted Requests<span class="ui-li-count">4</span></a>
+                </li>
+                <li><a href="#pendingReqToEntrepreneur">Pending Entrepreneurs Approval <span class="ui-li-count">2</span></a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+
+    </div>
+
+    <!--  Search Entrepreneur  -->
+    <div data-role="page" id="searchEntrepreneur" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Search Entrepreneur</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search Entrepreneurs...">
+                <li><a href="#">Entrepreneur 1</a>
+                </li>
+                <li><a href="#">Entrepreneur 2</a>
+                </li>
+                <li><a href="#">Entrepreneur 3</a>
+                </li>
+                <li><a href="#">Entrepreneur 4</a>
+                </li>
+                <li><a href="#">Entrepreneur 5</a>
+                </li>
+                <li><a href="#">Entrepreneur 6</a>
+                </li>
+                <li><a href="#">Entrepreneur 7</a>
+                </li>
+                <li><a href="#">Entrepreneur 8</a>
+                </li>
+                <li><a href="#">Entrepreneur 9</a>
+                </li>
+                <li><a href="#">Entrepreneur 10</a>
+                </li>
+                <li><a href="#">Entrepreneur 11</a>
+                </li>
+                <li><a href="#">Entrepreneur 12</a>
+                </li>
+                <li><a href="#">Entrepreneur 13</a>
+                </li>
+                <li><a href="#">Entrepreneur 14</a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+
+    <!--  Recommended Entrepreneurs  -->
+    <div data-role="page" id="recommendedEntrepreneur" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Recommended For You</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 4</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 5</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 6</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+    <!--  Request By Entrepreneur  -->
+    <div data-role="page" id="reqByEntrepreneur" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Approve Requests</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-split-icon="check" data-split-theme="b" data-inset="true">
+                <li>
+                    <a href="#reqDetails" data-rel="popup" data-position-to="window" data-transition="slideup">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                    <a href="#approveReq" data-rel="popup" data-position-to="window" data-transition="slideup">Purchase album</a>
+                </li>
+                <li>
+                    <a href="#reqDetails" data-rel="popup" data-position-to="window" data-transition="slideup">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                    <a href="#approveReq" data-rel="popup" data-position-to="window" data-transition="slideup">Purchase album</a>
+                </li>
+                <li>
+                    <a href="#reqDetails" data-rel="popup" data-position-to="window" data-transition="slideup">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                    <a href="#approveReq" data-rel="popup" data-position-to="window" data-transition="slideup">Purchase album</a>
+                </li>
+                <li>
+                    <a href="#reqDetails" data-rel="popup" data-position-to="window" data-transition="slideup">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 4</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                    <a href="#approveReq" data-rel="popup" data-position-to="window" data-transition="slideup">Purchase album</a>
+                </li>
+                <li>
+                    <a href="#reqDetails" data-rel="popup" data-position-to="window" data-transition="slideup">
+                        <img src="images/user_pic.png">
+                        <h2>Entrepreneur 5</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </a>
+                    <a href="#approveReq" data-rel="popup" data-position-to="window" data-transition="slideup">Purchase album</a>
+                </li>
+            </ul>
+            <div data-role="popup" id="approveReq" data-theme="b" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                <h3>Approve Request?</h3>
+                <p>By approving the request from the entrepreneur, he/she will be automatically notified that you are willing to move forward with discussions about the venture. Are you sure?</p>
+                <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Confirm</a>
+                <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Ignore</a>
+            </div>
+
+            <div data-role="popup" id="reqDetails">
+                <div data-role="header" data-porition="fiexd" data-theme="b">
+                    <h1>Entrepreneur #</h1>
+                </div>
+                <div data-role="content">
+                    <div class="profile-image">
+                        <img class="profile-pic" src="images/user_pic.png" />
+                    </div>
+                    <div>
+                        <h1>Details of the Idea</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <a href="#" data-rel="back" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left" data-theme="b">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+    <!--  Accepted Requests by Entrepreneurs  -->
+    <div data-role="page" id="accReqByEntrepreneur" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Accepted Requests</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 1</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 2</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 3</a>
+                </li>
+                <!--
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 4</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 5</a>
+                </li>
+-->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+
+    <!--  Accepted Requests by Entrepreneurs  -->
+    <div data-role="page" id="pendingReqToEntrepreneur" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" title="Go back">Back</a>
+            <h1>Pending Requests</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 1</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="" src="images/user_pic.png" alt="France" class="ui-li-icon ui-corner-none">Entrepreneur 2</a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+
+    <!--  About .Connect  -->
+    <div data-role="page" id="aboutPage" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a data-icon="back" data-iconpos="notext" data-rel="back"></a>
+            <h1>About .Connect</h1>
+        </div>
+
+        <div data-role="content">
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+
+    </div>
+
+
+    <!-- Personal Profile page -->
+    <div data-role="page" id="profile" data-title="profile" data-theme="b">
+        <div data-role="header" data-position="fixed">
+            <h1>My Profile</h1>
+            <a href="#" data-icon="back" data-rel="back" data-iconpos="notext" class=""></a>
+        </div>
+        <div data-role="content">
+            <!-- profile image -->
+            <img src="images/user_pic.png" alt="mee" />
+
+            <!-- my profile -->
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-collapsed="false">
+                    <h4>Personal Profile</h4>
+                    <!-- profile fields -->
+                    <div class="tablerow">
+                        <div class="left-table">Name:</div>
+                        <div class="right-table">Nadeesha Thilakarathne</div>
+                    </div>
+                    <div class="tablerow">
+                        <div class="left-table">Age:</div>
+                        <div class="right-table">24</div>
+                    </div>
+                    <div class="tablerow">
+                        <div class="left-table">Gender:</div>
+                        <div class="right-table">Female</div>
+                    </div>
+                    <div class="tablerow">
+                        <div class="left-table">Location:</div>
+                        <div class="right-table">&nbsp;Sri Lanka</div>
+                    </div>
+                    <div class="tablerow">
+                        <div class="left-table">Job:</div>
+                        <div class="right-table">Undergraduate</div>
+                    </div>
+                    <div class="tablerow">
+                        <div class="left-table">Bio:</div>
+                        <div class="right-table">Interested cording & learning new technology.</div>
+                    </div>
+                </div>
+
+                <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                    <h4>Skills & Experience</h4>
+
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                            <h4>JavaScript</h4>
+                            <p>JavaScript (sometimes abbreviated as JS) is a scripting language commonly implemented as part of a web browser in order to create enhanced user interfaces and dynamic websites. <a href="http://en.wikipedia.org/wiki/JavaScript">Wiki</a>
+                            </p>
+                        </div>
+                        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                            <h4>jQuery</h4>
+                            <p>jQuery is a multi-browser JavaScript library designed to simplify the client-side scripting of HTML.[1] It was released in January 2006 at BarCamp NYC by John Resig. It is currently developed by a team of developers led by Dave Methvin. Used by over 55% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today.[2][3] <a href="http://en.wikipedia.org/wiki/jQuery">Wiki</a>
+                            </p>
+                        </div>
+                        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                            <h4>jQuery Mobile</h4>
+                            <p>jQuery Mobile is a touch-optimized web framework (additionally known as a JavaScript library or a mobile framework) currently being developed by the jQuery project team. The development focuses on creating a framework compatible with a wide variety of smartphones and tablet computers,[2] made necessary by the growing but heterogeneous tablet and smartphone market.[3] <a href="http://en.wikipedia.org/wiki/JQuery_Mobile">Wiki</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                    <h4>Employment History</h4>
+
+                    <div data-role="collapsible-set">
+                        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                            <h4>2012 - 2013: Microsoft</h4>
+                            <p>Microsoft Corporation is an American multinational software corporation headquartered in Redmond, Washington that develops, manufactures, licenses and supports a wide range of products and services related to computing. The company was founded by Bill Gates and Paul Allen on April 4, 1975. Microsoft is the world's largest software maker measured by revenues.[3] It is also one of the world's most valuable companies.[4] <a href="http://en.wikipedia.org/wiki/Microsoft">Wiki</a>
+                            </p>
+                        </div>
+                        <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                            <h4>2010 - 2012: Google</h4>
+                            <p>Google Inc. (NASDAQ: GOOG) is an American multinational corporation that provides Internet-related products and services, including internet search, cloud computing, software and advertising technologies.[6] Advertising revenues from AdWords generate almost all of the company's profits.[7][8] <a href="http://en.wikipedia.org/wiki/Google">Wiki</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                    <h4>Interests & Hobbies</h4>
+                    <ul data-role="listview">
+                        <li>Fishing</li>
+                        <li>Swimming</li>
+                        <li>8 Ball</li>
+                        <li>Fishing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Household Profile DB storage</title>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,
+                                       initial-scale=1, maximum-scale=1,
+                                       minimum-scale=1,width=device-width" />
+    
+	
+	 <link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css">
+	 <link rel="stylesheet" href="css/table.css">
+   
+	 
+	 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	 <script type="text/javascript" src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	 
+	 <script type="text/javascript" src="js/iscroll.js"></script> 
+	  
+
+
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        
+		<!--/header-->	
+		<div data-role="header" data-position="inline" data-theme="b">
+		
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Back</a>
+			<h1>Household Profile</h1>
+			<a href="index.html" data-icon="home">Menu</a>
+			
+		</div>
+		<!--/header-->
+        
+		<div id="wrapper">
+			 
+				<div data-role="content">
+					<form id="contacts-form"> 
+					
+					<div data-role="fieldcontain">
+						<label > Home ID </label> 
+						<input class="inputClass" name="first_name" placeholder="H0001" value="" data-mini="true" type="text">
+					</div>
+					
+					
+					<div  data-role="fieldcontain">
+						<label > Owner </label> 
+						<input class="inputClass" name="last_name" placeholder="Aberathne" value="" type="text">
+					</div>
+                    
+                    <div  data-role="fieldcontain">
+						<label > Email </label> 
+						<input class="inputClass" name="email" placeholder="xyz@gmail.com" value="" type="text">
+					</div>
+					
+					
+                    
+                     <div class="button-wrapper">
+                        <div class="item button">
+                            <div class="field"><input type="button" id="contacts-op-discard" value="Discard"></div>
+                        </div>
+                        <div class="item button button-default">
+                            <div class="field"><input type="submit" id="contacts-op-save" value="Save"></div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id_entry" value="0">
+                   					
+				
+                 
+			 </form>
+           </div>
+		 </div>
+        
+        <div>
+            <table id="contacts-table">
+                <tbody>
+                     <tr id="contacts-head">
+                        <th>ID</th>
+                        <th>Home ID</th>
+                       <th>Owner Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </tbody>
+                    <tr id="entry-1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <!--<td><a data-op="edit" data-id="1">Edit</a> | <a data-op="remove" data-id="1">Remove</a></td>-->
+                    </tr>
+            </table>
+        </div>
+
+	</div>
+	<script>
+		var Contacts = {
+			index: window.localStorage.getItem("Contacts:index"),
+			$table: document.getElementById("contacts-table"),
+			$form: document.getElementById("contacts-form"),
+			$button_save: document.getElementById("contacts-op-save"),
+			$button_discard: document.getElementById("contacts-op-discard"),
+
+			init: function() {
+				// initialize storage index
+				if (!Contacts.index) {
+					window.localStorage.setItem("Contacts:index", Contacts.index = 1);
+				}
+
+				// initialize form
+				Contacts.$form.reset();
+				Contacts.$button_discard.addEventListener("click", function(event) {
+					Contacts.$form.reset();
+					Contacts.$form.id_entry.value = 0;
+				}, true);
+				Contacts.$form.addEventListener("submit", function(event) {
+					var entry = {
+						id: parseInt(this.id_entry.value),
+						first_name: this.first_name.value,
+						last_name: this.last_name.value,
+						email: this.email.value
+					};
+					if (entry.id == 0) { // add
+						Contacts.storeAdd(entry);
+						Contacts.tableAdd(entry);
+					}
+					else { // edit
+						Contacts.storeEdit(entry);
+						Contacts.tableEdit(entry);
+					}
+
+					this.reset();
+					this.id_entry.value = 0;
+					event.preventDefault();
+				}, true);
+
+				// initialize table
+				if (window.localStorage.length - 1) {
+					var contacts_list = [], i, key;
+					for (i = 0; i < window.localStorage.length; i++) {
+						key = window.localStorage.key(i);
+						if (/Contacts:\d+/.test(key)) {
+							contacts_list.push(JSON.parse(window.localStorage.getItem(key)));
+						}
+					}
+
+					if (contacts_list.length) {
+						contacts_list
+							.sort(function(a, b) {
+								return a.id < b.id ? -1 : (a.id > b.id ? 1 : 0);
+							})
+							.forEach(Contacts.tableAdd);
+					}
+				}
+				Contacts.$table.addEventListener("click", function(event) {
+					var op = event.target.getAttribute("data-op");
+					if (/edit|remove/.test(op)) {
+						var entry = JSON.parse(window.localStorage.getItem("Contacts:"+ event.target.getAttribute("data-id")));
+						if (op == "edit") {
+							Contacts.$form.first_name.value = entry.first_name;
+							Contacts.$form.last_name.value = entry.last_name;
+							Contacts.$form.email.value = entry.email;
+							Contacts.$form.id_entry.value = entry.id;
+						}
+						else if (op == "remove") {
+							if (confirm('Are you sure you want to remove "'+ entry.first_name +' '+ entry.last_name +'" from your contacts?')) {
+								Contacts.storeRemove(entry);
+								Contacts.tableRemove(entry);
+							}
+						}
+						event.preventDefault();
+					}
+				}, true);
+			},
+
+			storeAdd: function(entry) {
+				entry.id = Contacts.index;
+				window.localStorage.setItem("Contacts:index", ++Contacts.index);
+				window.localStorage.setItem("Contacts:"+ entry.id, JSON.stringify(entry));
+			},
+			storeEdit: function(entry) {
+				window.localStorage.setItem("Contacts:"+ entry.id, JSON.stringify(entry));
+			},
+			storeRemove: function(entry) {
+				window.localStorage.removeItem("Contacts:"+ entry.id);
+			},
+
+			tableAdd: function(entry) {
+				var $tr = document.createElement("tr"), $td, key;
+				for (key in entry) {
+					if (entry.hasOwnProperty(key)) {
+						$td = document.createElement("td");
+						$td.appendChild(document.createTextNode(entry[key]));
+						$tr.appendChild($td);
+					}
+				}
+				$td = document.createElement("td");
+				$td.innerHTML = '<a data-op="edit" data-id="'+ entry.id +'">Edit</a> | <a data-op="remove" data-id="'+ entry.id +'">Remove</a>';
+				$tr.appendChild($td);
+				$tr.setAttribute("id", "entry-"+ entry.id);
+				Contacts.$table.appendChild($tr);
+			},
+			tableEdit: function(entry) {
+				var $tr = document.getElementById("entry-"+ entry.id), $td, key;
+				$tr.innerHTML = "";
+				for (key in entry) {
+					if (entry.hasOwnProperty(key)) {
+						$td = document.createElement("td");
+						$td.appendChild(document.createTextNode(entry[key]));
+						$tr.appendChild($td);
+					}
+				}
+				$td = document.createElement("td");
+				$td.innerHTML = '<a data-op="edit" data-id="'+ entry.id +'">Edit</a> | <a data-op="remove" data-id="'+ entry.id +'">Remove</a>';
+				$tr.appendChild($td);
+			},
+			tableRemove: function(entry) {
+				Contacts.$table.removeChild(document.getElementById("entry-"+ entry.id));
+			}
+		};
+		Contacts.init();
+	</script>
+</body>
+</html>
+<!-- ********************* HMTL5 Storage end *********************** -->

@@ -1,0 +1,221 @@
+/* Styles done by KasunKV */
+.footer-app-name {
+/*    font-weight: bold;*/
+    font-size: 1.2em;
+}
+
+body {
+    background-color: #2A2A2A;
+}
+.ui-panel-wrapper {
+    background-color: #2A2A2A; !important
+}
+
+.login-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ui-link {
+    text-decoration: none;
+}
+.space-small { height: 50px; }
+.space-medium { height: 100px; }
+.space-large { height: 150px; }
+.space-extra-large { height: 200px; }
+
+.login-text {
+    text-align: center;
+}
+.custom-btn {
+    border-radius: 0px;
+    !important
+}
+.reg-lable {
+    text-align: left;
+}
+.reg-input-item {
+    margin-bottom: 15px;
+}
+.landing-icon {
+    margin: 0 auto;
+    color: white;    
+}
+
+.landing-link {
+    text-decoration: none;
+    font-weight:lighter; !important
+    
+}
+.landing-link p {
+    color: #FFF; !important
+    font-weight:lighter; !important
+}
+
+.sidebar-header {
+    height: 50px;
+    background-color: #000;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.sidebar-header h1 {
+    font-size: 1.3em;
+    padding-top: 10px
+    
+}
+
+.profile-image {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background: #000;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+.profile-pic-small {
+    height: 32px;
+    width: 32px;
+}
+
+.profile-image img {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.step {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    width: 10%;
+    padding-right: 35px;
+    padding-top: 20px;
+}
+
+.step-nav {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+/*    width: 10%;*/
+    margin-top: -5px;
+    padding: 0px;
+    padding-bottom: -5px;
+}
+
+.app-content {
+    height: 100%; !important
+}
+
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-28 { font-size: 28px; }
+.size-32 { font-size: 32px; }
+.size-48 { font-size: 48px; }
+.size-64 { font-size: 64px; }
+.size-96 { font-size: 96px; }
+
+
+
+
+
+
+
+
+
+
+/* End of Styles done by KasunKV */
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
+.ui-content {
+    text-align: center;
+}
+.pt-menu .ui-btn {
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    margin: 5px !important;
+    padding: 10px;
+    text-align: center;
+    width: 110px;
+    /*border-radius: 200px;*/
+}
+.pt-menu .ui-btn-inner {
+    border: 0;
+}
+.pt-menu .ui-btn img {
+    /*height: 50px;*/
+}
+/* contact page */
+
+#contact .ui-br {
+    border: 0;
+}
+/* form underline bug fix */
+
+.ui-br {
+    border-bottom: none !important;
+}
+/* form errors */
+
+label.error {
+    color: red;
+    padding-top: .5em;
+    vertical-align: top;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 22%;
+}
+/* table styles */
+
+.tablerow {
+    display: inline-block;
+    width: 100%;
+}
+.left-table {
+    text-align: right;
+    width: 25%;
+    float: left;
+    padding-right: 2%;
+    font-weight: bold;
+}
+.right-table {
+    text-align: left;
+    width: 73%;
+    float: left;
+}
+/* bottom back and next buttons */
+
+.previous-btn {
+    float: left;
+}
+.next-btn {
+    float: right;
+}
+/* toggle buttons styles */
+
+.ui-collapsible-heading-toggle {
+    border: none;
+}
+/* ui component tweaks */
+
+.ui-textalign-left {
+    text-align: left;
+}
+/* portfolio item right button stlye fix */
+
+.portfolio-item .ui-btn-icon-notext {
+    padding: 0 !important;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>.Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.theme-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons-1.4.2.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!--Entreprenur Registration-->
+    <div data-role="page" id="EntrRegistration" data-theme="b">
+
+        <!--/header-->
+        <div data-role="header" data-position="fixed">
+            <a href="index.html" data-icon="back" title="Back" data-iconpos="notext">Back</a>
+            <h1>Registration</h1>
+        </div>
+        <!--/header-->
+
+        <div id="wrapper">
+            <form action="" name="myForm">
+                <div data-role="content">
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="firstname">First Name</label>
+                        <input name="firstname" id="firstname" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="lastname">Last Name</label>
+                        <input name="lasttname" id="lastname" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="gender">Gender</label>
+
+                        <select name="gender" id="gender">
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="category">Category</label>
+                        <select name="category" id="category">
+                            <option>Select an option</option>
+                            <option>IT</option>
+                            <option>Medicine</option>
+                            <option>Fashion and Clothing</option>
+                            <option>Lifestyles</option>
+                        </select>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="email">Email</label>
+                        <input name="email" id="email" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="address">Address</label>
+                        <textarea name="address" id="address" placeholder="" rows="6" cols="20">
+                        </textarea>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="city">City</label>
+                        <input name="city" id="city" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="country">Country</label>
+                        <input name="country" id="country" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="telephone">Telephone Number</label>
+                        <input name="telephone" id="telephone" placeholder="" value="" data-mini="true" type="number">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="linkedin">Personal LinkedIn Profile URL(Mandatory)</label>
+                        <input name="linkedin" id="linkedin" placeholder="" value="" data-mini="true" type="text">
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="description">Personal Description</label>
+                        <textarea name="description" id="description" placeholder="Tell us about you.." rows="6" cols="20"></textarea>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="jobs">Jobs</label>
+                        <textarea name="jobs" id="jobs" placeholder="" rows="6" cols="20"></textarea>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="skills">Skills</label>
+                        <textarea name="skills" id="skills" placeholder="" rows="6" cols="20"></textarea>
+                    </div>
+
+                    <div class="reg-input-item">
+                        <label class="reg-lable" for="work">What you have done so far (Please provide links to work you have done)</label>
+                        <textarea name="work" id="work" placeholder="" rows="" cols=""></textarea>
+                    </div>
+                    
+                    <button class="ui-btn ui-shadow custom-btn" id="submit" name="submit">Register</button>
+                </div>
+                <!--content-->
+            </form>
+
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+            </div>
+            <!--nav bar-->
+        </div>
+        <!--wrapper-->
+    </div>
+    <!--Entreprenure-->
+</body>
+
+</html>

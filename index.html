@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>.Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.theme-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons-1.4.2.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- Home -->
+    <div data-role="page" id="page1" data-theme="b">
+        <div class="space-large"></div>
+        <div id="wrapper">
+            <div class="login-wrapper">
+                <form action="" name="mylogin">
+                    <div data-role="content">
+                        <div class="username">
+                            <input name="username" id="username" placeholder="Username" value="" type="text">
+                        </div>
+                        <div class="psw">
+                            <input name="password" id="psw" placeholder="Password" value="" type="password">
+                        </div>
+                        <a href="#popupSignin" class="ui-btn ui-shadow" id="login" name="Login" onclick="" data-position-to="window" data-transition="slideup">Sign in</a>
+                        </p>
+                    </div>
+                </form>
+                <p class="login-text">Don't have an account? <a href="#popupDialog" class="ui-link" data-position-to="window" data-transition="slideup"> &nbsp;Register</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="popup" id="popupDialog" data-theme="b">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Choose account type</li>
+            <li>
+                <a href="entrepreneur_reg.html" data-transition="face">Entrepreneur</a>
+            </li>
+            <li>
+                <a href="investor_reg.html" data-transition="fade">Investor</a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="popup" id="popupSignin" data-theme="b">
+            <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                <li data-role="list-divider">Choose...</li>
+                <li><a href="entrepreneur_home.html">Entrepreneur Home Page</a></li>
+                <li><a href="investor_home.html">Investor Home Page</a></li>
+            </ul>
+    </div>
+
+    <script type="text/javascript">
+        function validationcheck() {
+
+            if (document.mylogin.username.value == "") {
+                alert("Please Enter Username.");
+                document.mylogin.username.focus();
+            } else if (document.mylogin.psw.value == "") {
+                alert("Please Enter Password.");
+                document.mylogin.psw.focus();
+            } else {
+                success();
+            }
+        }
+
+        function success() {
+            onDeviceReady();
+        }
+
+        function success() {
+            window.open("index.html", "_self", false);
+        }
+    </script>
+</body>
+
+</html>

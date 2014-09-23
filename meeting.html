@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>.Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <link href="css/jquery.mobile.structure-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.theme-1.4.2.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons-1.4.2.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    
+    <script type="text/javascript">
+    // if Google is down, it looks to local file...
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+ </script>
+ 
+	
+	<link rel="stylesheet" href="js/Date_Time_Picker/DateTimePicker.css" />
+	<script src="js/Date_Time_Picker/DateTimePicker.js"></script> 
+	
+	
+	<script>
+		$(document).ready(function()
+			{
+				// DOM Element Insertion and Plugin Initialisation on loading of first page if you are using DatePicker on first page
+				$("#page1").append("<div id='dateBox'></div>"); // Add Element To DOM
+				$("#dateBox").DateTimePicker(); // Plugin Initialization
+			
+			
+				// Otherwise, DOM Element Insertion and Plugin Initialisation can be done on pageshow
+				$("#page1, #page2").on("pageshow", function(event) 
+				{
+					$(this).append("<div id='dateBox'></div>"); // Add Element To DOM
+					$("#dateBox").DateTimePicker(); // Plugin Initialization
+				});
+			
+				// DOM Element Removal on pagehide method
+				$("#page1, #page2").on("pagehide", function(event) 
+				{
+					$("#dateBox").remove(); // Remove Element From DOM
+				});
+			
+			});
+	</script>
+ <script type="text/javascript" src="js/clone-form-td.js"></script>
+</head>    
+    
+
+<body>
+
+	<!-- Home -->
+	<div data-role="page" id="page1" data-theme="b">
+		
+	
+		
+	<!--/header-->	
+		<div data-role="header" data-position="inline" data-theme="b" data-position="fixed">
+		
+			<a href="#" data-icon="back" data-rel="back" title="Go back" data-iconpos="notext">Back</a>
+			<h1>Manage Meetings</h1>
+			
+		</div>
+		<!--/header-->
+		
+	<div data-role="content">
+		<div id="wrapper">
+			<div class="sign-up_box">
+			
+				<form action="#" method="post" id="sign-up_area">
+				
+					<div id="entry1" class="clonedInput">
+					
+						<h2 id="reference" name="reference" class="heading-reference">Progress Meeting #1</h2>
+						<fieldset>
+							<label class="label_ttl" for="title">Venture Title:</label>
+							<input class="input_ttl" type="text" name="title" id="title" value="">
+
+							<!-- end .select_ttl -->
+						</fieldset>
+
+						<fieldset>
+							<label class="label_disc" for="discription">Description:</label>
+
+							<textarea class="input_disc" name="discription" id="discription" value=""></textarea >
+
+								<p class="form-help">Simple description about the meeting.</p><!-- this is optional -->
+						</fieldset>
+
+						<fieldset>
+							<label class="label_datetime" for="date">Date & time:</label>
+							<input type="text" data-field="datetime" readonly  name="date" id="date">
+						</fieldset>
+
+						
+					</div><!-- end #entry1 -->
+
+					<div id="addDelButtons">
+						<input type="button" id="btnAdd" value="add section"> <input type="button" id="btnDel" value="remove section above">
+					</div>
+
+					<fieldset>
+						<label for="notes">Notes</label> 
+						<textarea id="notes"></textarea>
+					</fieldset>
+
+					<fieldset class="check">
+						<label><input type="checkbox"> I accept the terms of service.</label>
+					</fieldset>
+
+					<fieldset class="form-actions">
+						<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+			</div><!-- end sign-up_box -->
+
+    
+		</div>
+	</div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <p class="copyright"><span class="footer-app-name">.Connect</span> &nbsp;&nbsp;&nbsp; &copy; Dream Zone 2014</p>
+        </div>
+
+</body>
+</html>
